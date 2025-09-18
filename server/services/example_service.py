@@ -16,7 +16,7 @@ class Minha_Classe:
         texto_maiusculo = texto.upper()
         
         return {
-            "conceito": "xablau",
+            "conceito": "Time-series",
             "explicacao": "faça o trabalho",
             "exemplos": {
                 "inteiro": {

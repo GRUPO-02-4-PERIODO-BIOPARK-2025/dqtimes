@@ -1,17 +1,21 @@
 from fastapi import FastAPI, Query
-from services.meu_servico import Minha_Classe
+from services.example_service import Minha_Classe
 from models import (
     Exemplo1Response, 
     Exemplo2Response
 )
 
 app = FastAPI(
-    title="Microserviço xablau",
+    title="Microserviço Time-series",
     description="API da quinta-feira",
     version="2.9.9"
 )
 
 servico = Minha_Classe()
+
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to the Time-series Microservice!"}
 
 
 @app.get("/exemplo1", response_model=Exemplo1Response)
